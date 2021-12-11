@@ -57,7 +57,8 @@
       <button role="createtodo"class="btn addBtn">Add task</button>
     </div>
 
-    <!-- {% for row in todos %}
+    <table>
+    {% for row in todos %}
         <tr {% if row[2] == 1 %} class="table-success" {% endif %}>
             <td>
                 {% if row[2] == 0 %}
@@ -77,24 +78,8 @@
             
             
         </tr>
-    {% endfor %} -->
-
-    {% for row in todos %}
-        <tr {% if row[2] == 1 %} class="table-success" {% endif %}>
-            <td>
-                {% if row[2] == 0 %}
-                <input type="checkbox" id="taskToggleCheckbox" checked data-toggle="toggle" data-onstyle="warning"
-                    data-offstyle="success" data-on="Pending" data-off="Done">
-                {% endif %}
-                {% if row[2] == 1 %}
-                <input type="checkbox" id="taskToggleCheckbox" data-toggle="toggle" data-onstyle="warning"
-                    data-offstyle="success" data-on="Pending" data-off="Done">
-                {% endif %}
-            </td>
-            <td class="taskNameColumn">{{ row[0] }}</td>
-            <td>{{ row[1] }}</td>
-        </tr>
-        {% endfor %}
+    {% endfor %}
+    </table>
 
 <!-- <img id="theImage" src="{{url_for('static', filename='Cat.jpeg')}}"> -->
   
