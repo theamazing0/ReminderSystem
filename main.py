@@ -13,11 +13,10 @@ def index():
 @app.route('/addtask')
 def addtask(methods=['GET', 'POST']):
   name = request.args.get('name')
-  description = request.args.get('description')
   conn = sql.connect('todo.db')
   conn.execute("INSERT INTO TODOS (NAME, DESCRIPTION, STATUS) \
         VALUES (?, ?, 0)",
-        (name, description))
+        (name, "Reminder From Web Client"))
   conn.commit()
   todos = conn.execute("SELECT NAME, DESCRIPTION, STATUS from TODOS")
   return "thisreturnstatementdoesnotmatter"

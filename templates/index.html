@@ -12,8 +12,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 
 	</script>
-	<script src="{{url_for('static', filename='index.js')}}"> 
-</script>
+	<script src="{{url_for('static', filename='index.js')}}">
+
+	</script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js">
 
 	</script>
@@ -53,15 +54,33 @@
     <div id="myDIV" class="header">
       <h2 style="margin:5px">My To Do List</h2>
       <input type="text" id="myInput" placeholder="name of task...">
-      <span onclick="newElement()" class="addBtn">Add</span>
+      <button role="createtodo"class="addBtn">Add</button>
     </div>
 
-    <ul id="myUL">
-      <li>Hit the gym</li>
-    </ul>
+    {% for row in todos %}
+        <tr {% if row[2] == 1 %} class="table-success" {% endif %}>
+            <td>
+                {% if row[2] == 0 %}
+                <input type="checkbox" id="taskToggleCheckbox" checked data-toggle="toggle" data-onstyle="warning"
+                    data-offstyle="success" data-on="Pending" data-off="Done">
+                {% endif %}
+                {% if row[2] == 1 %}
+                <input type="checkbox" id="taskToggleCheckbox" data-toggle="toggle" data-onstyle="warning"
+                    data-offstyle="success" data-on="Pending" data-off="Done">
+                {% endif %}
+            </td>
+            <ul id="myUL">
+            <li>{{ row[0] }}</li>
+            </ul>
+            <td>{{ row[1] }}</td>
+        </tr>
+    {% endfor %}
 
-<img id="theImage" src="Cat.jpeg">
+<img id="theImage" href="{{url_for('static', filename='cat.png')}}">
 <a id="showImage">Show cat image</a>  
+
+<img id="theImage2" href="{{url_for('static', filename='dog.png')}}">
+<a id="showImage2">Show dog image</a>  
 
 <button onclick="myFunction1()">toggle blue/green mode</button>
 </body>

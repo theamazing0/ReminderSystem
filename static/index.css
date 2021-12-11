@@ -167,7 +167,7 @@ input {
 
 body {
   padding: 25px;
-  background-color: #2E8B57;
+  background-image: url("background.jpg");
   color: #6495ED;
   font-size: 15px;
   font-family: 'Playfair Display', serif;
@@ -179,5 +179,35 @@ body {
   color: #2E8B57;
   font-family: 'Playfair Display', serif;
 }
-#theImage { visibility: hidden; }
+.theImage { visibility: hidden; 
+display: inline-block;
+text-decoration: none;
+font-size: 14px;
+color: floralwhite;
+border: 1px solid white;
+padding: 20px 20px;
+margin-left: 40%;
+background: transparent;
+position: relative;
+cursor: pointer;
+text-align: relative;
+transition: 1s;
 
+
+}
+
+.theImage2 { 
+visibility: hidden; 
+display: inline-block;
+text-decoration: none;
+font-size: 14px;
+color: floralwhite;
+border: 1px solid white;
+padding: 20px 20px;
+margin-left: 40%;
+background: transparent;
+position: relative;
+cursor: pointer;
+text-align: relative;
+transition: 1s;
+}
