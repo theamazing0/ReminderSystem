@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+	<title>REMINDIO</title>
+	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+
+	</script>
+	<script src="{{url_for('static', filename='index.js')}}">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js">
+
+	</script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+	<nav class="navbar navbar-light bg-light">
+		<span class="navbar-brand mb-0 h1">Remindo</span>
+  </nav>
+
+</head>
+<body>
+
+  <section class = "header">
+    
+    <a href="index.html"><img src= "{{url_for('static', filename='background.jpg')}}" ></a>
+    <div class="title"> 
+      <h2>welcome to remindio!</h2>
+      <p>personalized, beautiful, and free.</p>
+    </div>
+
+  </section>
+
+  <section class = "additems">
+    <a href="" class="hero-btn">click here to add a task or item</a>
+
+
+    
+
+  </section>
+  
+</body>
+<html>
