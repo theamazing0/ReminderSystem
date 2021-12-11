@@ -51,14 +51,19 @@
     
 
   </section> -->
+  
+  <section class="card">
     <div id="myDIV" class="header">
-      <h2 style="margin:5px">My To-Do List</h2>
-      <input type="text" id="myInput" placeholder="name of task...">
-      <button role="createtodo"class="btn addBtn">Add task</button>
+      <h2 style="margin:5px;color:rgb(0, 186, 243);">My To-Do List</h2>
+      <input type="text" id="myInput" placeholder="name of task..." >
+      <button role="createtodo"class="btn btn-info addBtn" style="border-radius:8px;color:rgb(0,186,243);">Add task</button>
     </div>
+    </section>
 
+  {% for row in todos %}
+    <section class="card">
     <table>
-    {% for row in todos %}
+    
         <tr {% if row[2] == 1 %} class="table-success" {% endif %}>
             <td>
                 {% if row[2] == 0 %}
@@ -72,14 +77,16 @@
           </td>
           <td>
                 
-            <h3 class = "label">{{ row[0] }}</h3>
+            <h3 class = "label" style="color:black">{{ row[0] }}</h3>
             
           </td>
             
             
         </tr>
+        </table>
+    </section>
     {% endfor %}
-    </table>
+    
 
 <!-- <img id="theImage" src="{{url_for('static', filename='Cat.jpeg')}}"> -->
   
@@ -91,5 +98,9 @@
 
 <!-- 
 <button onclick="myFunction1()">toggle blue/green mode</button> -->
+  <!-- <section class="card">
+    <h1> Here are some reviews from our customers!</h1>
+    <
+  </section> -->
 </body>
 <html>
