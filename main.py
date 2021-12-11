@@ -6,7 +6,9 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @app.route('/')
 def index():
-  return render_template('index.html')
+  conn = sql.connect('todo.db')
+  todos = conn.execute("SELECT NAME, DESCRIPTION, STATUS from TODOS")
+  return render_template('index.html', todos = todos)
 
 @app.route('/addtask')
 def addtask(methods=['GET', 'POST']):

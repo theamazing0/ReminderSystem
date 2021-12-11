@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-	<title>REMINDIO</title>
+	<title>Remindio</title>
 	<!-- JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
@@ -12,9 +12,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 
 	</script>
-	<script src="{{url_for('static', filename='index.js')}}">
-
-	</script>
+	<script src="{{url_for('static', filename='index.js')}}"> 
+</script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js">
 
 	</script>
@@ -28,30 +27,42 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-	<nav class="navbar navbar-light bg-light">
-		<span class="navbar-brand mb-0 h1">Remindo</span>
+	<nav class="navbar1">
+		<span class="navbar-brand mb-0 h1">Remindio - <strong>for students, by students.</strong></span>
   </nav>
 
+ 
 </head>
 <body>
-
-  <section class = "header">
-    
-    <a href="index.html"><img src= "{{url_for('static', filename='background.jpg')}}" ></a>
+ 
+  <section class = "card">
     <div class="title"> 
-      <h2>welcome to remindio!</h2>
-      <p>personalized, beautiful, and free.</p>
+      <h1 style="text-align: center;">Welcome to Remindio!</h1>
+      <p style="color: black; text-align: center;"><em>Personalized, beautiful, and free!</em></p>
     </div>
 
   </section>
-
+<!-- 
   <section class = "additems">
-    <a href="" class="hero-btn">click here to add a task or item</a>
+    <a href="#scrolling" class="hero-btn">See below for your customized list</a>
 
 
     
 
-  </section>
-  
+  </section> -->
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px">My To Do List</h2>
+      <input type="text" id="myInput" placeholder="name of task...">
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL">
+      <li>Hit the gym</li>
+    </ul>
+
+<img id="theImage" src="Cat.jpeg">
+<a id="showImage">Show cat image</a>  
+
+<button onclick="myFunction1()">toggle blue/green mode</button>
 </body>
 <html>

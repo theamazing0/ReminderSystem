@@ -1,10 +1,18 @@
 {
   "files": {
+    "static/index.css": [
+      {
+        "id": "48e284b3-8476-43ec-a224-389983268e9c",
+        "line": 164,
+        "version": 1467,
+        "index": 2706
+      }
+    ],
     "templates/index.html": [
       {
         "id": "792535d2-64c2-406f-81c6-3a5461a18047",
         "line": 1,
-        "version": 112,
+        "version": 1262,
         "index": 0
       }
     ]
