@@ -36,7 +36,7 @@
 </head>
 <body>
  
-  <section class = "card">
+  <section class="card">
     <div class="title"> 
       <h1 style="text-align: center;">Welcome to Remindio!</h1>
       <p style="color: black; text-align: center;"><em>Personalized, beautiful, and free!</em></p>
@@ -52,10 +52,32 @@
 
   </section> -->
     <div id="myDIV" class="header">
-      <h2 style="margin:5px">My To Do List</h2>
+      <h2 style="margin:5px">My To-Do List</h2>
       <input type="text" id="myInput" placeholder="name of task...">
-      <button role="createtodo"class="addBtn">Add</button>
+      <button role="createtodo"class="btn addBtn">Add task</button>
     </div>
+
+    <!-- {% for row in todos %}
+        <tr {% if row[2] == 1 %} class="table-success" {% endif %}>
+            <td>
+                {% if row[2] == 0 %}
+                <input type="checkbox" id="taskToggleCheckbox" checked data-toggle="toggle" data-onstyle="warning"
+                    data-offstyle="success" data-on="Pending" data-off="Done">
+                {% endif %}
+                {% if row[2] == 1 %}
+                <input type="checkbox" id="taskToggleCheckbox" data-toggle="toggle" data-onstyle="warning"
+                    data-offstyle="success" data-on="Pending" data-off="Done">
+                {% endif %}
+          </td>
+          <td>
+                
+            <h3 class = "label">{{ row[0] }}</h3>
+            
+          </td>
+            
+            
+        </tr>
+    {% endfor %} -->
 
     {% for row in todos %}
         <tr {% if row[2] == 1 %} class="table-success" {% endif %}>
@@ -69,19 +91,20 @@
                     data-offstyle="success" data-on="Pending" data-off="Done">
                 {% endif %}
             </td>
-            <ul id="myUL">
-            <li>{{ row[0] }}</li>
-            </ul>
+            <td class="taskNameColumn">{{ row[0] }}</td>
             <td>{{ row[1] }}</td>
         </tr>
-    {% endfor %}
+        {% endfor %}
 
-<img id="theImage" href="{{url_for('static', filename='cat.png')}}">
-<a id="showImage">Show cat image</a>  
+<!-- <img id="theImage" src="{{url_for('static', filename='Cat.jpeg')}}"> -->
+  
+<!-- <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">show cat</a>
+<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">show dog</a>
+<img id="theImage2" src="{{url_for('static', filename='dog.png')}}"> -->
 
-<img id="theImage2" href="{{url_for('static', filename='dog.png')}}">
-<a id="showImage2">Show dog image</a>  
 
-<button onclick="myFunction1()">toggle blue/green mode</button>
+
+<!-- 
+<button onclick="myFunction1()">toggle blue/green mode</button> -->
 </body>
 <html>

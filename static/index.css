@@ -1,30 +1,43 @@
 *{
-  margin: 0;
-  padding: 0;
   font-family: 'Playfair Display', serif;
   box-sizing: border-box;
   cursor: url('https://img.informer.com/icons/png/32/3457/3457533.png') 10 10, auto;
 }
+.card{
+  margin: 10px;
+  padding: 10px;
+  color: purple;
 
+  
+}
+body{
 
+  background-image: url(background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+  
+}
 .navbar1{
-  color:aliceblue;
+  
   font-size: 20px;
   margin-top: 10px;
   margin-left: 15px;
-  
+  color: black;
   text-decoration-line: underline;
        
 
 }
 h1{
-  font-size: 400%;
+  font-size: 700%;
+    text-shadow: -2px -2px orange, 2px -2px orange, -2px 2px orange, 2px 2px orange;
 }
 .additems h2{
   font-size: 42px;
   color: #fff;
   position: center;
-}
+}!
 .additems p{
   margin: 10px 0 40px;
   font-size: 14px;
@@ -164,50 +177,47 @@ input {
 }
 
 
-
-body {
-  padding: 25px;
-  background-image: url("background.jpg");
-  color: #6495ED;
-  font-size: 15px;
-  font-family: 'Playfair Display', serif;
-}
-
 .dark-mode {
   margin-top: 215px;
   background-color: #6495ED;
-  color: #2E8B57;
+ 
   font-family: 'Playfair Display', serif;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid white;
+  padding: 20px 20px;
+  margin-left: 40%;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  text-align: relative;
+  transition: 1s;
 }
-.theImage { visibility: hidden; 
-display: inline-block;
-text-decoration: none;
-font-size: 14px;
-color: floralwhite;
-border: 1px solid white;
-padding: 20px 20px;
-margin-left: 40%;
-background: transparent;
-position: relative;
-cursor: pointer;
-text-align: relative;
-transition: 1s;
-
+.theImage { 
+  max-width: 50%;  
+  height: auto;  
 
 }
 
 .theImage2 { 
-visibility: hidden; 
-display: inline-block;
-text-decoration: none;
-font-size: 14px;
-color: floralwhite;
-border: 1px solid white;
-padding: 20px 20px;
-margin-left: 40%;
-background: transparent;
-position: relative;
-cursor: pointer;
-text-align: relative;
-transition: 1s;
+  max-width: 50%;  
+  height: auto;  
+}
+
+
+.btn btn-primary btn-lg disabled {
+  font-size: 14px;
+  color: floralwhite;
+  border: 1px solid white;
+  padding: 20px 20px;
+  margin-left: 40%;
+}
+
+.taskToggleCheckbox{
+  margin-left:500 px;
+}
+
+.label {
+  color: white !important; 
 }
